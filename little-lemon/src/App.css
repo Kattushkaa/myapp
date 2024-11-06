@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column; /* Add column layout for the entire page */
+  min-height: 100vh; /* Ensure the page takes full height */
 }
 
 .App-logo {
@@ -15,17 +18,32 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 100vh; /* Take full height for header */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding: 20px; /* Add padding for spacing */
+}
+
+.App-main {
+  flex: 1; /* Allow the main content to take remaining space */
+  padding: 20px;
+  background-color: #f4f4f4; /* Light background for main */
+}
+
+.App-footer {
+  background-color: #282c34;
+  padding: 10px;
+  color: white;
+  text-align: center;
 }
 
 .App-link {
   color: #61dafb;
+  text-decoration: none;
 }
 
 @keyframes App-logo-spin {
