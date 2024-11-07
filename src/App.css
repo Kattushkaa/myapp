@@ -1,0 +1,191 @@
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column; /* Add column layout for the entire page */
+  min-height: 100vh; /* Ensure the page takes full height */
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: white;
+  height: 80px; /* Set a smaller height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px; /* Horizontal padding */
+  color: black;
+}
+
+.App-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.App-nav a {
+  color: black;
+  text-decoration: none;
+}
+
+/* dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd */
+.App-main {
+  flex: 1; /* Allow the main content to take remaining space */
+  padding: 20px;
+  background-color: #495e57; /* Light background for main */
+  color: white;
+}
+
+.button {
+  background-color: #f4ce14;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 25px; /* Makes edges rounded */
+  box-shadow: none; /* Removes any shadow */
+}
+
+.button:hover {
+  background-color: orange;
+}
+
+.yellow-text {
+  color: #f4ce14;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center the content */
+  padding: 20px;
+}
+
+.first-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  color: white;
+  margin: 10px;
+}
+
+.text-container {
+  text-align: left; /* Center text */
+  margin-bottom: 30px; /* Space between text and images */
+}
+
+.image-container {
+  flex: 1; /* Take up space for the image */
+  display: flex;
+  justify-content: center; /* Align the image to the right */
+}
+
+.main-image {
+  width: 50%; /* Adjust as needed, 100% will make it responsive */
+  max-width: 500px; /* Limit the maximum width of the image */
+  height: auto;
+  border-radius: 25px;
+}
+
+.menusection-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  color: white;
+  margin: 10px;
+}
+
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Adjust the space between each item */
+  flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
+}
+.menu-section {
+  display: flex;
+  justify-content: space-around; /* Aligns menu items side by side */
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.menu-container {
+  flex:1 ;
+  text-align: center;
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  width: 30%; /* Menu items should take up 30% of the width each */
+}
+
+.menu-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.menu-header {
+  color: #495e57;
+  margin: 10px 0;
+}
+
+.menu-text {
+  color: #495e57;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+/* dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd */
+
+.App-footer {
+  background-color: #282c34;
+  padding: 10px;
+  color: white;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center; /* Align items vertically centered */
+  justify-content: flex-start; /* Align items to the left */
+  gap: 10px; /* Add some space between the image and the text */
+}
+
+.App-link {
+  color: #61dafb;
+  text-decoration: none;
+}
+
+/* Example for a class-based selector */
+.logo-image {
+  width: 100px;
+  height: auto; /* Maintains aspect ratio */
+}
+
+.footer-image {
+  width: auto;
+  height: 150px;
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
