@@ -1,6 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import mainpic from './mainpic.jpg';
-import salad from './salad.jpg'; // Add appropriate images for each menu item
+import salad from './salad.jpg';
 import bruchetta from './bruchetta.jpg';
 import dessert from './dessert.jpg';
 
@@ -17,9 +18,9 @@ function Main() {
           focused on traditional<br/>
           recipes served with a modern twist
           </p>
-          <a href="/reservation">
+          <Link to="/reservation">
             <button className="button">Reserve a table </button>
-          </a>
+          </Link>
         </div>
         <div className="image-container">
           <img src={mainpic} alt="Mainpicture" className="main-image" />
