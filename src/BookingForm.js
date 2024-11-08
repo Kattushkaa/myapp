@@ -1,20 +1,18 @@
 // src/BookingForm.js
 import React, { useState } from 'react';
 
-function BookingForm() {
+function BookingForm({ onSubmit }) { // Accept the onSubmit prop
   const [resDate, setResDate] = useState('');
   const [resTime, setResTime] = useState('');
-  const [guests, setGuests] = useState(1); // Default to 1 guest
-  const [occasion, setOccasion] = useState('no-occasion'); // Default to "no occasion"
+  const [guests, setGuests] = useState(1);
+  const [occasion, setOccasion] = useState('no-occasion');
 
-  // Sample available times
   const availableTimes = ['17:00', '18:00', '19:00', '20:00', '21:00'];
 
-  // Handle form submission
   const handleSubmit = (event) => {
     event.preventDefault();
-    // You can handle the form data (e.g., send it to an API)
-    alert(`Reservation for ${resDate} at ${resTime} with ${guests} guest(s) for a ${occasion}`);
+    const formData = { resDate, resTime, guests, occasion };
+    onSubmit(formData); // Pass the form data to the parent component
   };
 
   return (
@@ -35,7 +33,7 @@ function BookingForm() {
         onChange={(e) => setResTime(e.target.value)}
         required
       >
-        {availableTimes.map(time => (
+        {availableTimes.map((time) => (
           <option key={time} value={time}>
             {time}
           </option>
@@ -71,3 +69,4 @@ function BookingForm() {
 }
 
 export default BookingForm;
+

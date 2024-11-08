@@ -5,6 +5,7 @@ import Main from './Main';
 import Footer from './Footer';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import BookingPage from './BookingPage';
+import ConfirmedBooking from './ConfirmedBooking'; // Corrected import path
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Routes>
             <Route path="/home" element={<Main />} />
             <Route path="/reservation" element={<BookingPage />} />
+            <Route path="/booking-confirmed" element={<ConfirmedBooking />} />
           </Routes>
         </main>
         <footer className="App-footer">
@@ -29,4 +31,5 @@ function App() {
 }
 
 export default App;
+
 
